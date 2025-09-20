@@ -2,6 +2,7 @@
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://pblsmart.com/dika",
   "type": "module",
   "scripts": {
     "dev": "vite",
