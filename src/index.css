@@ -1,0 +1,28 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-moving {
+  background-image: url("/src/assets/23.jpg"); /* ganti path gambarnya */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: moveBg 20s linear infinite alternate;
+}
+
+@keyframes bgMove {
+  0% {
+    background-position: center top;
+  }
+  50% {
+    background-position: center bottom;
+  }
+  100% {
+    background-position: center top;
+  }
+}
+
+.animate-bgMove {
+  animation: bgMove 10s ease-in-out infinite; /* bergerak loop */
+}
