@@ -5,7 +5,7 @@ export default function ThreeBackground() {
     <div
       className="fixed inset-0 w-full h-full bg-cover bg-center animate-bgMove -z-10"
       style={{
-        backgroundImage: `url("/src/assets/23.jpg")`, // lokal file
+        backgroundImage: `url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1350&q=80")`, 
       }}
     >
       {/* overlay biar teks tetap terbaca */}
