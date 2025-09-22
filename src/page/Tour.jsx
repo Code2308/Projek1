@@ -3,28 +3,87 @@ import { useNavigate } from "react-router-dom";
 import { FaStar, FaSearch, FaMapMarkerAlt, FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
-import burniTelong from "../assets/Burni telong.jpeg";
-import gunungMerbabu from "../assets/Gunung Merbabu.jpeg";
-import gunungRinjani from "../assets/Gunung Rinjani.jpeg";
-import gunungLeuser from "../assets/Gunung Leuser.jpeg";
-import gunungJayawijaya from "../assets/Gunung jayawijaya.jpg";
-import gunungGede from "../assets/Gunung Gede.jpeg";
-import gunungSemeru from "../assets/Gunung semeru.jpeg";
-import gunungSorakmerapi from "../assets/sorak merapi.jpg";
-import gunungBromo from "../assets/Gunung bromo.jpeg";
-import gunungLawu from "../assets/Gunung lewu.jpeg";
-
 const tours = [
-  { id: 1, title: "Gunung Burni Telong", date: "Aceh", rating: 5, image: burniTelong, description: "Pendakian menantang dengan panorama pegunungan Aceh yang memukau." },
-  { id: 2, title: "Gunung Merbabu", date: "Jawa Tengah", rating: 5, image: gunungMerbabu, description: "Rute populer, padang savana, sunrise bagus dan dekat Yogyakarta." },
-  { id: 3, title: "Gunung Rinjani", date: "Nusa Tenggara Barat", rating: 5, image: gunungRinjani, description: "Trek panjang, Segara Anak, favorit para pendaki nasional." },
-  { id: 4, title: "Gunung Leuser", date: "Aceh - Sumatera Utara", rating: 5, image: gunungLeuser, description: "Hutan tropis lebat, habitat orangutan, pengalaman eco-trek." },
-  { id: 5, title: "Gunung Jayawijaya (Puncak Carstensz)", date: "Papua  ", rating: 5, image: gunungJayawijaya, description: "Salah satu yang paling ekstrim; salju tropis & tantangan tinggi." },   
-  { id: 6, title: "Gunung Gede", date: "Jawa Barat", rating: 5, image: gunungGede, description: "Pendakian singkat, cocok weekend-trip, pemandangan kawah dan savana." },
-  { id: 7, title: "Gunung Semeru", date: "Jawa Timur", rating: 5, image: gunungSemeru, description: "Tertinggi di Jawa, terkenal dengan Ranu Kumbolo dan Mahameru." },
-  { id: 8, title: "Gunung Sora / Merapi", date: "Jawa Tengah - Yogyakarta", rating: 5, image: gunungSorakmerapi, description: "Gunung aktif dengan pemandangan lava dome dan jalur menantang." },
-  { id: 9, title: "Gunung Bromo", date: "Jawa Timur", rating: 5, image: gunungBromo, description: "Sunrise legendaris, lautan pasir, cocok untuk pemula & fotografer." },
-  { id: 10, title: "Gunung Lawu", date: "Jawa Tengah - Jawa Timur", rating: 5, image: gunungLawu, description: "Jalur ramah pemula, banyak situs sejarah dan pemandangan hijau." },
+  { 
+    id: 1, 
+    title: "Gunung Burni Telong", 
+    description: "Pemandangan indah dari Gunung Burni Telong.", 
+    image: "https://i.pinimg.com/1200x/fb/56/7a/fb567aea0d1c74e96c20b1a0ff20ae3c.jpg", 
+    duration: "5D4N", 
+    rating: 4.5 
+  },
+  { 
+    id: 2, 
+    title: "Gunung Merbabu", 
+    description: "Suasana tenang di Gunung Merbabu.", 
+    image: "https://i.pinimg.com/736x/12/00/d3/1200d3b3d04c6ec0a819109e7ef4b4cb.jpg", 
+    duration: "3D2N", 
+    rating: 4.8 
+  },
+  { 
+    id: 3, 
+    title: "Gunung Rinjani", 
+    description: "Keindahan alam Gunung Rinjani.", 
+    image: "https://i.pinimg.com/736x/4d/93/76/4d9376326e0c11a2292cf76e6e54114f.jpg", 
+    duration: "4D3N", 
+    rating: 5 
+  },
+  { 
+    id: 4, 
+    title: "Gunung Leuser", 
+    description: "Keindahan alam Gunung Leuser.", 
+    image: "https://i.pinimg.com/736x/ab/67/27/ab6727fd0ec1f102149275b798e95dfc.jpg", 
+    duration: "5D4N", 
+    rating: 4.7 
+  },
+  { 
+    id: 5, 
+    title: "Gunung Jayawijaya", 
+    description: "Pemandangan indah dari Gunung Jayawijaya.", 
+    image: "https://i.pinimg.com/1200x/d9/52/f0/d952f076933a6b5d63690ca98bf15851.jpg", 
+    duration: "6D5N", 
+    rating: 4.9 
+  },
+  { 
+    id: 6, 
+    title: "Gunung Gede", 
+    description: "Suasana tenang di Gunung Gede.", 
+    image: "https://i.pinimg.com/1200x/e3/69/40/e3694037a717e49e1ca46a2f786f9205.jpg", 
+    duration: "2D1N", 
+    rating: 4.6 
+  },
+  { 
+    id: 7, 
+    title: "Gunung Semeru", 
+    description: "Keindahan alam Gunung Semeru.", 
+    image: "https://i.pinimg.com/1200x/41/b7/8a/41b78a561b24f34ef211e35757d89637.jpg", 
+    duration: "3D2N", 
+    rating: 5 
+  },
+  { 
+    id: 8, 
+    title: "Gunung Sorakmerapi", 
+    description: "Keindahan alam Gunung Sorakmerapi.", 
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4qBqufmtLlrZ8VitR4Oz2LMpuUhVRyRMIyQ&s", 
+    duration: "3D2N", 
+    rating: 4.4 
+  },
+  { 
+    id: 9, 
+    title: "Gunung Sibuatan", 
+    description: "Keindahan alam Gunung Sibuatan.", 
+    image: "https://i.pinimg.com/1200x/95/19/cb/9519cb698bb6bb5ebfa1967f87b394fa.jpg", 
+    duration: "3D2N", 
+    rating: 4.4 
+  },
+  { 
+    id: 10, 
+    title: "Gunung Sibayak", 
+    description: "Keindahan alam Gunung Sibayak.", 
+    image: "https://i.pinimg.com/736x/43/fe/25/43fe253941351588bcedb8bd9c2fae51.jpg", 
+    duration: "3D2N", 
+    rating: 4.4 
+  },
 ];
 
 export default function Tour() {
@@ -33,10 +92,16 @@ export default function Tour() {
   const perPage = 4;
   const navigate = useNavigate();
 
-  const filteredTours = tours.filter((tour) =>
-    tour.title.toLowerCase().includes(search.toLowerCase()) ||
-    tour.date.toLowerCase().includes(search.toLowerCase())
-  );
+  // Filter tours — proteksi kalau field tidak ada (awalnya kamu gunakan tour.date padahal tidak ada)
+  const filteredTours = tours.filter((t) => {
+    const q = search.toLowerCase().trim();
+    if (!q) return true;
+    return (
+      (t.title && t.title.toLowerCase().includes(q)) ||
+      (t.description && t.description.toLowerCase().includes(q)) ||
+      (t.duration && t.duration.toLowerCase().includes(q))
+    );
+  });
 
   const totalPages = Math.max(1, Math.ceil(filteredTours.length / perPage));
   const start = (page - 1) * perPage;
@@ -126,10 +191,10 @@ export default function Tour() {
                     <img src={tour.image} alt={tour.title} className="w-full h-48 object-cover" />
                     <div className="p-4">
                       <div className="flex text-yellow-400 mb-2">
-                        {[...Array(tour.rating)].map((_, i) => <FaStar key={i} />)}
+                        {[...Array(Math.floor(tour.rating))].map((_, i) => <FaStar key={i} />)}
                       </div>
                       <h3 className="font-semibold text-gray-800 mb-2">{tour.title}</h3>
-                      <p className="text-gray-600 text-sm mb-2">{tour.date}</p>
+                      <p className="text-gray-600 text-sm mb-2">{tour.duration}</p>
                       <p className="text-gray-700 text-sm">{tour.description}</p>
                     </div>
                     <div className="flex justify-between items-center border-t p-3 text-sm text-gray-600">

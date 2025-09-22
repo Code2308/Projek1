@@ -20,7 +20,7 @@ export default function PostAndReviews() {
 
           <div className="bg-white shadow-lg rounded-xl overflow-hidden w-full">
             <img
-              src="src/assets/Gunung Gede.jpeg"
+              src="https://i.pinimg.com/1200x/e3/69/40/e3694037a717e49e1ca46a2f786f9205.jpg"
               alt="Pantai Tercantik di Yogyakarta"
               className="w-full h-60 object-cover"
             />
