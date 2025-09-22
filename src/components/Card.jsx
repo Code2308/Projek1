@@ -3,26 +3,73 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaClock, FaStar, FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-// Import gambar
-import burniTelong from "../assets/Burni telong.jpeg";
-import gunungMerbabu from "../assets/Gunung Merbabu.jpeg";
-import gunungRinjani from "../assets/Gunung Rinjani.jpeg";
-import gunungLeuser from "../assets/Gunung Leuser.jpeg";
-import gunungJayawijaya from "../assets/Gunung jayawijaya.jpg";
-import gunungGede from "../assets/Gunung Gede.jpeg";
-import gunungSemeru from "../assets/Gunung semeru.jpeg";
-import gunungSorakmerapi from "../assets/sorak merapi.jpg";
-
 const photos = [
-  { id: 1, title: "Gunung Burni Telong", description: "Pemandangan indah dari Gunung Burni Telong.", image: burniTelong, duration: "5D4N", rating: 4.5 },
-  { id: 2, title: "Gunung Merbabu", description: "Suasana tenang di Gunung Merbabu.", image: gunungMerbabu, duration: "3D2N", rating: 4.8 },
-  { id: 3, title: "Gunung Rinjani", description: "Keindahan alam Gunung Rinjani.", image: gunungRinjani, duration: "4D3N", rating: 5 },
-  { id: 4, title: "Gunung Leuser", description: "Keindahan alam Gunung Leuser.", image: gunungLeuser, duration: "5D4N", rating: 4.7 },
-  { id: 5, title: "Gunung Jayawijaya", description: "Pemandangan indah dari Gunung Jayawijaya.", image: gunungJayawijaya, duration: "6D5N", rating: 4.9 },
-  { id: 6, title: "Gunung Gede", description: "Suasana tenang di Gunung Gede.", image: gunungGede, duration: "2D1N", rating: 4.6 },
-  { id: 7, title: "Gunung Semeru", description: "Keindahan alam Gunung Semeru.", image: gunungSemeru, duration: "3D2N", rating: 5 },
-  { id: 8, title: "Gunung Sorakmerapi", description: "Keindahan alam Gunung Sorakmerapi.", image: gunungSorakmerapi, duration: "3D2N", rating: 4.4 },
+  { 
+    id: 1, 
+    title: "Gunung Burni Telong", 
+    description: "Pemandangan indah dari Gunung Burni Telong.", 
+    image: "https://i.pinimg.com/1200x/fb/56/7a/fb567aea0d1c74e96c20b1a0ff20ae3c.jpg", 
+    duration: "5D4N", 
+    rating: 4.5 
+  },
+  { 
+    id: 2, 
+    title: "Gunung Merbabu", 
+    description: "Suasana tenang di Gunung Merbabu.", 
+    image: "https://i.pinimg.com/736x/12/00/d3/1200d3b3d04c6ec0a819109e7ef4b4cb.jpg", 
+    duration: "3D2N", 
+    rating: 4.8 
+  },
+  { 
+    id: 3, 
+    title: "Gunung Rinjani", 
+    description: "Keindahan alam Gunung Rinjani.", 
+    image: "https://i.pinimg.com/736x/4d/93/76/4d9376326e0c11a2292cf76e6e54114f.jpg", 
+    duration: "4D3N", 
+    rating: 5 
+  },
+  { 
+    id: 4, 
+    title: "Gunung Leuser", 
+    description: "Keindahan alam Gunung Leuser.", 
+    image: "https://i.pinimg.com/736x/ab/67/27/ab6727fd0ec1f102149275b798e95dfc.jpg", 
+    duration: "5D4N", 
+    rating: 4.7 
+  },
+  { 
+    id: 5, 
+    title: "Gunung Jayawijaya", 
+    description: "Pemandangan indah dari Gunung Jayawijaya.", 
+    image: "https://i.pinimg.com/1200x/d9/52/f0/d952f076933a6b5d63690ca98bf15851.jpg", 
+    duration: "6D5N", 
+    rating: 4.9 
+  },
+  { 
+    id: 6, 
+    title: "Gunung Gede", 
+    description: "Suasana tenang di Gunung Gede.", 
+    image: "https://i.pinimg.com/1200x/e3/69/40/e3694037a717e49e1ca46a2f786f9205.jpg", 
+    duration: "2D1N", 
+    rating: 4.6 
+  },
+  { 
+    id: 7, 
+    title: "Gunung Semeru", 
+    description: "Keindahan alam Gunung Semeru.", 
+    image: "https://i.pinimg.com/1200x/41/b7/8a/41b78a561b24f34ef211e35757d89637.jpg", 
+    duration: "3D2N", 
+    rating: 5 
+  },
+  { 
+    id: 8, 
+    title: "Gunung Sorakmerapi", 
+    description: "Keindahan alam Gunung Sorakmerapi.", 
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4qBqufmtLlrZ8VitR4Oz2LMpuUhVRyRMIyQ&s", 
+    duration: "3D2N", 
+    rating: 4.4 
+  },
 ];
+
 
 // Komponen rating
 const StarRating = ({ rating }) => {

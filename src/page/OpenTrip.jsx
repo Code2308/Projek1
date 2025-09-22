@@ -165,7 +165,7 @@ export default function OpenTrip() {
 
         {/* 🔹 STRUK */}
         {struk && (
-          <div className="mt-8 shadow rounded-lg p-6">
+          <div className="mt-8 shadow rounded-lg p-6 bg-white">
             <h3 className="text-black font-bold mb-4">Struk Pemesanan</h3>
             <p>
               <b>Nama:</b> {struk.nama}

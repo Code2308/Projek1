@@ -91,7 +91,7 @@ export default function Navbar() {
         transition={{ duration: 0.5 }}
         className={`md:hidden ${
           isOpen ? "block" : "hidden"
-        } ${scrolled ? "bg-white text-white" : "bg-black/90 text-white"}`}
+        } ${scrolled ? "bg-white text-black" : "bg-black/90 text-white"}`}
       >
         <ul className="flex flex-col space-y-6 p-6 text-center font-medium">
           {menuItems.map((item) => (
